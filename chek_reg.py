@@ -14,7 +14,7 @@ class chek_email():
     def send_key(self):
         print(self.token)
 
-    def chek_control(self, key, email):
+    def chek_control(self, key, id):
         global control_sum
         if key == self.sum:
             read = xlrd.open_workbook("path")
@@ -22,7 +22,7 @@ class chek_email():
             wb_dst = copy(sheetr)
             ws_dst = wb_dst.get_sheet(0)
             for i in range(0,sheetr.ncols):
-                if sheetr.cell(i,2).value == email:
+                if sheetr.cell(i,0).value == id:
                     ws_dst.write(i, 6, 'true')
                 else:
                     ws_dst.write(i, 6, 'false')
