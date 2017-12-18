@@ -11,8 +11,8 @@ def authorization(login, password):
     print(datapass, datalog)
     print(login, password)
     while i < row:
-        datalog[i] = sheet.cell_value(i, 3)
-        datapass[i] = sheet.cell_value(i, 4)
+        datalog[i] = sheet.cell_value(i, 4)
+        datapass[i] = sheet.cell_value(i, 5)
         print(i)
         i = i + 1
     print(datapass, datalog)
