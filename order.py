@@ -2,13 +2,14 @@
 
 class Order:
 
-    id = 0
-    weight = 0
-    size = 0
-    loginCostumer = ""
-    loginExecutor = ""
-    price = 0
-    status = ""
+    def __init__(self):
+        self.id = 0
+        self.weight = 0
+        self.size = 0
+        self.loginCostumer = ""
+        self.loginExecutor = ""
+        self.price = 0
+        self.status = ""
 
 #IS IT NEED???
 

@@ -3,10 +3,10 @@
 from datetime import datetime
 
 class orderDetails():
+    def __init__(self):
+        self.adressPickup = ""
+        self.adressDelivery = ""
+        self.timePickup= datetime.now()
+        self.timeDelivery = datetime.now()
+        self.description = ""
 
-    adressPickup = ""
-    adressDelivery = ""
-    timePickup= datetime.now()
-    timeDelivery = datetime.now()
-    description = ""
-#IS IT NEED???

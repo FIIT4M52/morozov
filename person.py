@@ -2,14 +2,15 @@
 
 class Person:
 
-    id = 0
-    name = ''
-    lastName = ''
-    phone = 0
-    login = ''
-    password = ''
-    calification = 0
-    role = []
+    def __init__(self):
+        self.id = 0
+        self.name = ''
+        self.lastName = ''
+        self.phone = 0
+        self.login = ''
+        self.password = ''
+        self.calification = 0
+        self.role = []
 
     def crud(self):
         pass
