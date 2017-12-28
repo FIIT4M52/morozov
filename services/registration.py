@@ -14,7 +14,7 @@ class PersonService:
             text_file.write(jsonString)
         return person
     
-     def getPersonById(self, personId):
+    def getPersonById(self, personId):
         with open("Person" + str(personId) + ".txt", "r") as text_file:
             jsonString = text_file.read()
         return json.loads(jsonString)
