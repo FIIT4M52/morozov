@@ -16,5 +16,7 @@ def ChangeOrderStatus(orderId, status):
 	for ii in range(sheet.nrows):
 		data = sheet.cell_value(ii, 0)
 		if int(value) == int(data):
-			sheet.ceil(row=li, column=6).value = json.dumps	({'status':order.status})
+			sheet.ceil(row=li, column=6).value = order.status
+
+
 
