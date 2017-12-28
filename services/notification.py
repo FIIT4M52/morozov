@@ -8,8 +8,8 @@ class toast():
         self.weight = 0
         self.area = "" #лучше тут конечно же что бы выбиралось из списка
 
-    def send_to_user(self):
-        pass
+    def send_to_user(self, start, end):
+        print(get_request(self, start, end))
 
     def get_request(self, start, end):
         i = 0
@@ -22,3 +22,15 @@ class toast():
                     mas.append(sheetr.sheet_by_index(0).cell(i,0).value)
                     i+=1
         return mas
+'''
+ещё один вариант
+def __init__(self, filter):  принимаем фильтры в конструктор, на момент написания этой функции фильтры ещё не были написаны!!!!
+    self.filter = filter
+
+def get_request(self, order, filters):
+    json_order = json.load(order)
+    if self.filter == filters:
+        json_obj = json.dump(order)
+        return json_obj
+        
+'''
