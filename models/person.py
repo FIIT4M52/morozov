@@ -11,7 +11,7 @@ class Person:
         self.login = ''
         self.password = ''
         self.calification = 0
-        self.role = []
+        self.role = ''
 
     def crud(self):
         pass
