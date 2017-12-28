@@ -13,3 +13,17 @@ class PersonService:
         with open("Person" + str(person.id) + ".txt", "w") as text_file:
             text_file.write(jsonString)
         return person
+    
+     def getPersonById(self, personId):
+        with open("Person" + str(personId) + ".txt", "r") as text_file:
+            jsonString = text_file.read()
+        return json.loads(jsonString)
+
+    def savePerson(self, personId, person):
+        jsonString = json.dumps(person)
+        with open("Person" + str(personId) + ".txt", "w") as text_file:
+            text_file.write(jsonString)
+
+    def deletePerson(self, personId):
+        with open("Person" + str(personId) + ".txt", "w") as text_file:
+            os.remove(os.path.abspath(text_file.name))
