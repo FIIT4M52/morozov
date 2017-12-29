@@ -9,8 +9,8 @@ class Order:
     loginExecutor = ""
     price = 0
     status = ""
-    adressPickup = ""
-    adressDelivery = ""
+    addressPickup = ""
+    addressDelivery = ""
     timePickup = datetime.now()
     timeDelivery = datetime.now()
     description = ""
@@ -24,8 +24,8 @@ class Order:
         self.loginExecutor = loginExecutor
         self.price = price
         self.status = status
-        self.adressPickup = adressPickup
-        self.adressDelivery = adressDelivery
+        self.addressPickup = adressPickup
+        self.addressDelivery = adressDelivery
         self.timePickup = timePickup
         self.timeDelivery = timeDelivery
         self.description = description
@@ -48,11 +48,11 @@ class Order:
     def setStatus(self, status):
         self.status = status
 
-    def setAdressPickup(self, adressPickup):
-        self.adressPickup = adressPickup
+    def setAddressPickup(self, addressPickup):
+        self.addressPickup = addressPickup
 
-    def setAdressDelivery(self, adressDelivery):
-        self.adressDelivery = adressDelivery
+    def setAddressDelivery(self, addressDelivery):
+        self.addressDelivery = addressDelivery
 
     def setTimePickup(self, timePickup):
         self.timePickup = timePickup
