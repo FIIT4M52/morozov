@@ -1,8 +1,0 @@
-# IntellijIdea files
-*.iml
-.idea
-out
-
-# Mac files
-
-.DS_Store
