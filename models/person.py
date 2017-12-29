@@ -1,5 +1,6 @@
 #import your classes and libs
 
+
 class Person:
 
     def __init__(self):
@@ -10,7 +11,7 @@ class Person:
         self.login = ''
         self.password = ''
         self.calification = 0
-        self.role = []
+        self.role = ''
 
     def crud(self):
         pass
