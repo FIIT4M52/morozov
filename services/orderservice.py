@@ -33,3 +33,8 @@ class OrderService:
     def deleteOrder(self, orderId):
         with open("Order" + str(orderId) + ".txt", "w") as text_file:
             os.remove(os.path.abspath(text_file.name))
+
+    def dissmissOrderById(self, orderId):
+        order = self.getOrderById(orderId)
+        order.status = "dissmiss"
+        self.saveOrder(self, orderId, order)
