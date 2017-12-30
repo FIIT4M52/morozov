@@ -36,5 +36,11 @@ class OrderService:
 
     def dissmissOrderById(self, orderId):
         order = self.getOrderById(orderId)
-        order.status = "dissmiss"
-        self.saveOrder(self, orderId, order)
+        if order.status == "created":
+            order.status = "dissmiss"
+
+        if order.status == "accepted":
+            order.status = "dissmiss"
+            order.rejectionReason(input(f"Enter your {reason}: "))
+
+        self.saveOrder(orderId, order)

@@ -14,6 +14,7 @@ class Order:
     timePickup = datetime.now()
     timeDelivery = datetime.now()
     description = ""
+    rejectionReason = ""
 
     def __init__(self, id, weight, size, loginCostumer, loginExecutor, price, status,
                  adressPickup, adressDelivery, timePickup, timeDelivery, description):
@@ -29,6 +30,7 @@ class Order:
         self.timePickup = timePickup
         self.timeDelivery = timeDelivery
         self.description = description
+        self.rejectionReason = ""
 
     def setWeight(self, weight):
         self.weight = weight
@@ -62,3 +64,6 @@ class Order:
 
     def setDescription(self, description):
         self.description = description
+
+    def setRejectionReason(self, rejectionReason):
+        self.rejectionReason = rejectionReason
